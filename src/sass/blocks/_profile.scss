@@ -1,0 +1,32 @@
+.profile {
+
+  &__name {
+    font-size: 32px;
+    color: #333;
+    margin: 0;
+    @media (max-width: $tablet) {
+      font-size: 24px;
+    }
+  }
+
+  &__desc {
+    font-size: 32px;
+    line-height: 36px;
+    color: #333;
+    margin: 20px 0 20px 0;
+    @media (max-width: $tablet) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__inst-link, &__email-link {
+    font-size: 16px;
+    color: #888;
+    text-decoration: none;
+  }
+
+  &__email-link {
+    margin-left: 12px;
+  }
+}

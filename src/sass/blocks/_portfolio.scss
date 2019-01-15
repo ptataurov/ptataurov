@@ -1,0 +1,54 @@
+.portfolio {
+  display: flex;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 64px 0 0;
+    margin-bottom: auto;
+    @media (max-width: $tablet) {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__content {
+    @media (max-width: $tablet) {
+      margin-left: 20px;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0 0 16px 0;
+    padding-left: 0;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 4px;
+    @media (max-width: $tablet) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__list-link {
+    font-size: 18px;
+    color: #7a7c80;
+    text-decoration: none;
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+  }
+
+  &__medium-link {
+    font-size: 16px;
+    color: #adb0b6;
+    text-decoration: none;
+    @media (max-width: $tablet) {
+      font-size: 14px;
+    }
+  }
+}

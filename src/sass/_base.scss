@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  font-weight: 400;
+  cursor: none;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+br {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

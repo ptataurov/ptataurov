@@ -1,0 +1,16 @@
+.white-side {
+  background-color: #fff;
+  &__wrapper {
+    max-width: $desktop-hd;
+    @media (min-width: $desktop-hd) {
+      margin: 0 auto;
+    }
+  }
+  &__profile {
+    margin-left: 72px;
+    @media (max-width: $tablet) {
+      margin-left: 8%;
+      margin-right: 8%;
+    }
+  }
+}

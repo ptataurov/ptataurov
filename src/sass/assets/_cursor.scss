@@ -1,0 +1,59 @@
+.cursor-follower {
+    position: absolute;
+    background-color: rgba(128,128,128,.3);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: .6s cubic-bezier(.75,-1.27,.3,2.33) transform,.2s cubic-bezier(.75,-.27,.3,1.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    z-index: 100;
+    transform: translate(5px,5px);
+    &.active {
+      opacity: .7;
+      transform: scale(3);
+    }
+    @media (max-width: $desktop) {
+      visibility: hidden;
+    }
+}
+
+.cursor {
+    position: absolute;
+    background-color: #333;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    transition: .3s cubic-bezier(.75,-1.27,.3,2.33) transform,.2s cubic-bezier(.75,-.27,.3,1.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    z-index: 100;
+    transform: scale(1);
+    &.active {
+      opacity: .5;
+      transform: scale(0);
+    }
+    @media (max-width: $desktop) {
+      visibility: hidden;
+    }
+}
+
+.hover {
+    transition: .725s ease opacity;
+}
+
+
+.hovered {
+  opacity: .08;
+  @media (max-width: $desktop) {
+    opacity: 1;
+  }
+}
+
+// #particles-js.hovered {
+//   opacity: 0.1;
+//   @media (max-width: $desktop) {
+//     opacity: 1;
+//   }
+// }
