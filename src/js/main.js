@@ -1,31 +1,5 @@
 import FullPage from 'fullpage.js/dist/fullpage';
 
-window.onload = () => {
-  const loader = document.querySelector('.spinner'),
-      preloader = document.querySelector('.preloader');
-
-  setTimeout(function() {
-    fade(0, loader);
-  }, 2000);
-
-  const fade = (time, el) => {
-     let op = 1;
-     const timer = setInterval(() => {
-         if (op <= 0.1){
-             clearInterval(timer);
-             el.style.display = 'none';
-             if (preloader.style.display === 'none') {
-               return false;
-             }
-             fade(20, preloader);
-         }
-         el.style.opacity = op;
-         el.style.filter = 'alpha(opacity=' + op * 100 + ")";
-         op -= op * 0.1;
-     }, time);
-  }
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   new FullPage('#fullpage', {
     dragAndMove: true
@@ -56,8 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       follower.style.left = `${e - 12}px`;
       follower.style.top = `${s - 12}px`;
 
-
-
       cursor.style.left = `${mouseX}px`;
       cursor.style.top = `${mouseY}px`;
 
@@ -68,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     cur.forEach(el => {
-      el.addEventListener('mouseenter', function(e) {
+      el.addEventListener('mouseenter', function() {
 
         follower.classList.add('active');
         cursor.classList.add('active');
@@ -85,9 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   let mouseX = 0,
-    mouseY = 0,
-    follower,
-    cursor = !1;
+      mouseY = 0,
+      follower,
+      cursor = !1;
 
   start();
 });

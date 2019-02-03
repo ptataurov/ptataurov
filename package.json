@@ -6,10 +6,10 @@
   "scripts": {
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open",
-    "build": "webpack"
+    "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Pavel Tataurov",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
